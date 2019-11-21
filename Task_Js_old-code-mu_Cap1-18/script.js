@@ -656,3 +656,213 @@
         console.log(Math.round(num));
         console.log(num.toFixed(2));
         console.log(num.toFixed(3)); */
+
+//Найдите квадратный корень из 587. Округлите результат в большую и меньшую стороны, 
+//запишите результаты округления в объект с ключами 'floor' и 'ceil'.
+
+        /* let num = Math.sqrt(587);
+        let obj = {}, floor = Math.floor(num), ceil = Math.ceil(num);
+        obj.ceil = ceil;
+        obj.floor = floor; */ 
+
+//Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число
+
+        
+        /* document.write(Math.max(4, -2, 5, 19, -130, 0, 10)+ '<br>');
+        document.write(Math.min(4, -2, 5, 19, -130, 0, 10)); */
+
+//Выведите на экран случайное целое число от 1 до 100.
+
+        /* function getRandomNumber(min, max){
+            return Math.floor(Math.random()* (max - min +1 )) + min;
+                
+        }
+        document.write(getRandomNumber(1, 100));
+ */
+
+ //Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно воспользоваться циклами for или while). 
+
+        /* let arr = [];
+        for (let i = 0; i < 10; i++){
+            arr[i] = getRandomNumber(1, 10);
+        }
+        console.log(arr);
+
+        function getRandomNumber(min, max){
+            return Math.floor(Math.random()* (max - min +1 )) + min;
+                
+        } */
+
+ //Даны переменные a и b. Отнимите от a переменную b и результат присвойте переменной c. 
+ //Сделайте так, чтобы в любом случае в переменную c записалось положительное значение. 
+ //Проверьте работу скрипта при a и b, равных соответственно 3 и 5, 6 и 1.
+
+        /* let a = prompt('a'), b = prompt('b'), c=Math.abs(a-b);
+        console.log(c); */
+
+//Дан массив arr. Найдите среднее арифметическое его элементов. 
+//Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
+
+         /*    let arr = [12, 15, 20, 25, 59, 79], sum = 0, result;
+
+        for (let i = 0; i<arr.length; i++  ){
+            sum += arr[i];
+            console.log(sum);
+            if(i == arr.length - 1){
+                result = sum / (i + 1);
+            }
+        }
+    
+        console.log(sum);
+        console.log(result); */
+
+//Напишите скрипт, который будет находить факториал числа. 
+//Факториал (обозначается !) - это произведение (умножение) всех целых чисел, меньше данного, и его самого. 
+//Например, 4! = 1*2*3*4.
+
+      /* let n = prompt('select number of factorial'), m = n;
+
+      for (let i = n-1; i >= 1; i--){
+            m = m *(n-i);
+            console.log(m);
+      } */
+
+// Дана строка 'aaa@bbb@ccc'. Замените все @ на '!' с помощью глобального поиска и замены.
+
+     /*  let str = 'aaa@bbb@ccc';
+      let newstr = str.replace(/@/g, '!');
+      console.log(newstr) */
+
+//Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb' тремя разными способами
+
+      /* let str = 'aaa bbb ccc';
+
+      console.log(str.slice(3, 7));
+      console.log(str.substring(3, 7));
+      console.log(str.substr(3, 4)); */
+
+//В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31/12/2025'.
+
+      /* let data = '2025-12-31';
+      let arrData = data.split('-');
+      console.log(arrData);
+       arrData = arrData.reverse();
+      console.log(arrData);
+      console.log(arrData.join('//')); */
+
+//Дана строка 'js'. Сделайте из нее строку 'JS'.
+//Дана строка 'JS'. Сделайте из нее строку 'js'.
+
+      /* let str = "js", str1 = 'JS';
+      console.log(str.toUpperCase());
+      console.log(str1.toLowerCase()); */
+
+//Дана строка 'я учу javascript!'. Найдите количество символов в этой строке
+
+     /*  let str = 'я учу javascript!', symbols = 0, space = 0;
+      let arrstr = str.split('');
+      console.log(arrstr);
+      
+
+      for(let i = 0 ; i<=arrstr.length ; i++){
+          if(arrstr[i] == " "){ 
+               space = space + 1;
+               
+          } else {
+              symbols = symbols + 1;
+              
+          }
+          
+      }
+      document.write(`space: <strong> ${space} </strong> <br> symbols: <strong> ${symbols} </strong>`); */
+
+//Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript' 
+//тремя разными способами (через substr, substring, slice).
+
+      /* let str = 'я учу javascript!';
+      console.log(str.slice(2, 5));
+      console.log(str.substr(2, 4));
+      console.log(str.substring(2, 5));
+ */
+
+ //Дана строка 'я учу javascript!'. Найдите позицию подстроки 'учу'.
+
+    /* let str = 'я учу javascript!';
+    console.log(str.indexOf('учу',)); */
+
+//Дана переменная str, в которой хранится какой-либо текст. 
+//Реализуйте обрезание длинного текста по следующему принципу: если количество символов 
+//этого текста больше заданного в переменной n, tо в переменную result запишем первые n символов строки str и 
+//добавим в конец троеточие '...'. 
+//В противном случае в переменную result запишем содержимое переменной str.
+
+    /* let str = prompt('insert some text', ), result, n = prompt('number of simbols', 0);
+    let arrstr = str.split('');
+    console.log(arrstr);
+
+    if(arrstr.length > n){
+        result = str.substr(0, n);
+        document.write(`<strong> result : </strong> ${result} ...`)
+    } else{
+        result = str;
+        document.write(`<strong> result : </strong> ${result}`)
+    } */
+
+//Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены.
+    
+    /* let str = 'я-учу-javascript!';
+    console.log(str.replace(/-/g, '!')); */
+
+//Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
+
+    /* let str = 'я-учу-javascript!';
+    console.log(str.split('-')); */
+
+
+ //В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'.
+
+    /* let data = '2025-12-31', arrData = data.split("-"), inverseData = arrData.reverse();
+    console.log(inverseData);
+    console.log(inverseData.join('.')); */
+
+//Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.
+    
+    /* let arr =['я', 'учу', 'javascript', '!'];
+        console.log(arr.join('+'));
+ */
+
+//Преобразуйте первую букву строки в верхний регистр.
+
+  /*   let str = "переменной date лежит";
+        let arrStr = str.split('');
+       
+        arrStr[0] = arrStr[0].toUpperCase();
+        console.log(arrStr.join('')); */
+
+//Преобразуйте первую букву каждого слова строки в верхний регистр
+
+    /* let str = prompt('write some caracters!');
+    let arrstr = str.split('');
+
+        for(let i = 0 ; i<arrstr.length; i++){
+            if(arrstr[i] == " "){
+                arrstr[i + 1] = arrstr[i+1].toUpperCase();
+                
+            } else if (i == 0){
+                arrstr[i] = arrstr[i].toUpperCase();
+            }
+        }
+        console.log(arrstr.join('')); */
+
+//Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными строками.
+    
+        /* let str = prompt('write some caracters!');
+        let arrstr = str.split('');
+
+            for(let i = 0 ; i<arrstr.length; i++){
+                if(arrstr[i] == "_"){
+                    arrstr[i + 1] = arrstr[i+1].toUpperCase();
+                    arrstr[i] = arrstr[i].replace('_', '');
+                } 
+            }
+            console.log(arrstr.join('')); */
