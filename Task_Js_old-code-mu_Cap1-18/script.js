@@ -1,4 +1,4 @@
-//Задача. Создайте переменную str и присвойте ей значение 'abcde'. 
+//Задача. Создайте переменную str и присвойте ей значение 'abcde'.
 //Обращаясь к отдельным символам этой строки выведите на экран символ 'a', символ 'b', символ 'e'.
 
 /* let str = "abcde";
@@ -222,7 +222,7 @@ console.log(obj['first']); */
 //Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}. Выведите с его помощью слово 'jQuery
 
 /*  let obj = {
-     js:['jQuery', 'Angular'], 
+     js:['jQuery', 'Angular'],
      php: 'hello', css: 'world'
  };
  console.log(obj.js[0]);
@@ -234,7 +234,7 @@ console.log(obj['first']); */
 
 /* let arr = {
    ru:['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресение'],
-   en:['monday', 'tuesday', 'Thursday', 'wednesday', 'friday', 'saturday', 'sunday'], 
+   en:['monday', 'tuesday', 'Thursday', 'wednesday', 'friday', 'saturday', 'sunday'],
 } */
 //console.log(arr.ru[0] + ' ' + arr.en[2]); 
 
@@ -277,7 +277,7 @@ switch (min){
 let arr = [];
 
  if (lang == "en"){
-    arr = ['monday', 'tuesday', 'Thursday', 'wednesday', 'friday', 'saturday', 'sunday']; 
+    arr = ['monday', 'tuesday', 'Thursday', 'wednesday', 'friday', 'saturday', 'sunday'];
 } ;
 if(lang == 'ru')  {
     arr = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресение'];
@@ -290,7 +290,7 @@ if(lang == 'ru')  {
     default:
         arr = ['monday', 'tuesday', 'Thursday', 'wednesday', 'friday', 'saturday', 'sunday'];
         break;
-} 
+}
  console.log(arr);
 */
 /* let obj = {
@@ -320,7 +320,7 @@ if (num == 1 & num === 1){console.log('Correct!!')} else {console.log('Incorrect
 if (num === 0 || num === 2){
     num += 7;
     console.log(num);
-} else { 
+} else {
     num /= 10;
     console.log(num);
 } */
@@ -366,7 +366,7 @@ console.log(day);
 
     if (day >= 1 & day <= 10){console.log('prima decada')}
     else if(day > 10 & day <= 20){console.log('a doua decada')}
-    else if (day > 20 & day <= 31){console.log('a treia decada')} 
+    else if (day > 20 & day <= 31){console.log('a treia decada')}
     else {console.log('incorrect!')}; */
 
 //В переменной month лежит какое-то число из интервала от 1 до 12. 
@@ -377,7 +377,7 @@ console.log(day);
 if(month == "12" || month == "1" || month == '2' ){
     console.log('зима');
 } else if (month == "3" || month == "4" || month == '5' ){
-    console.log("весна")    
+    console.log("весна")
 } else if (month == "6" || month == "7" || month == '8' ){
     console.log("лето");
 } else if (month == "9" || month == "10" || month == '11' ){
@@ -406,7 +406,7 @@ if (str[0] == '1' || str[0]=='2' || str[0]=='3'){
    console.log('yes')
 } else {
    console.log('No!')
-} 
+}
 */
 
 //Дана строка из 3-х цифр. Найдите сумму этих цифр. 
@@ -429,7 +429,7 @@ if(sum1 == sum2){ console.log('yes')} else {console.log('No')}; */
     document.write(i + '<br>');
     i++;
 }
- 
+
 for( let i=1; i<=50; i++){
    document.write(i + '<br>');
 }*/
@@ -446,7 +446,7 @@ for (let i=0; i < arr.length; i++ ){
 
 /* let result = 1 ;
 let arr = [2, 3, 4, 5];
- 
+
 for (let i=0; i<arr.length; i++ ){
     result *= arr[i];
     console.log(result);
@@ -476,7 +476,7 @@ for (key in obj){
 //Выведите столбец четных чисел в промежутке от 0 до 100.
 
 /* for(i=0; i<=100; i++){
-    if (i % 2 == 0 ){document.write(i + '<br>')}; 
+    if (i % 2 == 0 ){document.write(i + '<br>')};
 } */
 
 //С помощью цикла найдите сумму чисел от 1 до 100.
@@ -503,7 +503,7 @@ for (i= 0 ; i< arr.length; i++){
 document.write('result: '+ result ); */
 
 //Дан объект obj. С помощью цикла for-in выведите на экран ключи и элементы этого объекта.
-/* 
+/*
     var obj = {green: 'зеленый', red: 'красный', blue: 'голубой'};
 
     for(key in obj){
@@ -549,7 +549,7 @@ for(i = 0 ; i<arr.length; i++){
 //Если есть - выведите на экран 'Есть!' и выйдите из цикла. Если нет - ничего делать не надо.
 
 /* let arr = [1, 2, 5, 9, 4, 13, 4, 10];
-    
+
     for(let i = 0 ; i<arr.length; i++){
         if(arr[i] == 4 ){
             document.write('Есть! значение 4!');
@@ -560,7 +560,7 @@ for(i = 0 ; i<arr.length; i++){
 
 //Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. 
 //Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
-/* 
+/*
     let arr =[10, 20, 30, 50, 235, 3000];
 
     for(let i =0 ; i<arr.length; i++){
@@ -583,7 +583,7 @@ for(i = 0 ; i<arr.length; i++){
 //Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
 
 /* let arr = ['luni', 'marti', 'miercuri', 'joi', 'vineri', 'simbata', 'duminica'];
- 
+
     for(let i = 0 ; i<arr.length ; i++){
         if(i>=0 & i<5 ){
             document.write(arr[i] + "<br>");
@@ -675,7 +675,7 @@ document.write(Math.min(4, -2, 5, 19, -130, 0, 10)); */
 
 /* function getRandomNumber(min, max){
     return Math.floor(Math.random()* (max - min +1 )) + min;
-        
+
 }
 document.write(getRandomNumber(1, 100));
 */
@@ -690,7 +690,7 @@ console.log(arr);
 
 function getRandomNumber(min, max){
     return Math.floor(Math.random()* (max - min +1 )) + min;
-        
+
 } */
 
 //Даны переменные a и b. Отнимите от a переменную b и результат присвойте переменной c. 
@@ -712,7 +712,7 @@ for (let i = 0; i<arr.length; i++  ){
        result = sum / (i + 1);
    }
 }
- 
+
 console.log(sum);
 console.log(result); */
 
@@ -762,17 +762,17 @@ console.log(str1.toLowerCase()); */
 /*  let str = 'я учу javascript!', symbols = 0, space = 0;
  let arrstr = str.split('');
  console.log(arrstr);
- 
+
 
  for(let i = 0 ; i<=arrstr.length ; i++){
-     if(arrstr[i] == " "){ 
+     if(arrstr[i] == " "){
           space = space + 1;
-          
+
      } else {
          symbols = symbols + 1;
-         
+
      }
-     
+
  }
  document.write(`space: <strong> ${space} </strong> <br> symbols: <strong> ${symbols} </strong>`); */
 
@@ -835,7 +835,7 @@ console.log(inverseData.join('.')); */
 
 /*   let str = "переменной date лежит";
       let arrStr = str.split('');
-     
+
       arrStr[0] = arrStr[0].toUpperCase();
       console.log(arrStr.join('')); */
 
@@ -847,7 +847,7 @@ let arrstr = str.split('');
     for(let i = 0 ; i<arrstr.length; i++){
         if(arrstr[i] == " "){
             arrstr[i + 1] = arrstr[i+1].toUpperCase();
-            
+
         } else if (i == 0){
             arrstr[i] = arrstr[i].toUpperCase();
         }
@@ -863,7 +863,7 @@ let arrstr = str.split('');
         if(arrstr[i] == "_"){
             arrstr[i + 1] = arrstr[i+1].toUpperCase();
             arrstr[i] = arrstr[i].replace('_', '');
-        } 
+        }
     }
     console.log(arrstr.join('')); */
 
@@ -884,7 +884,7 @@ console.log(Num(25)); */
 //Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
 
 /* function DifNum(a, b, c){
-    return (a - b)/c; 
+    return (a - b)/c;
 }
 console.log(DifNum(50, 3, 5)); */
 
@@ -924,18 +924,117 @@ console.log(Num(arr)); */
 // Дано число, например 31. Проверьте, что это число не делится ни на одно другое число кроме себя самого и единицы.
 // То есть в нашем случае нужно проверить, что число 31 не делится на все числа от 2 до 30. Если число не делится - выведите 'false', 
 // а если делится - выведите 'true'.
-        /* let str = '13213498726698';
-        let arr = str.split('');
-        console.log(arr);
 
-        function Num(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == 5) {
-                    return true;
-                }
-            }
-            return false;
+/* let num = 100;
+let divide = 0;
+let arr = [];
+console.log(arr);
+
+for (let j=2; j< num; j++){
+    arr.push(j);
+}
+    console.log(arr);
+ function Num(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (num % arr[i] == 0) {
+            divide += 1;
+            console.log(arr[i]);
+            return true;
         }
-        console.log(Num(arr)); */
+    }
+    return false;
+}
+console.log(Num(arr));
+console.log(divide); */
 // Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд.
 // Если есть - выведите 'да', а если нет - выведите 'нет'.
+
+/*    let str = '1321349338726698';
+           let arr = str.split('');
+           console.log(arr);
+
+           function Num(arr) {
+               for (let i = 0; i < arr.length; i++) {
+                   if (arr[i] == arr[i+1]) {
+                       return true;
+                   }
+               }
+               return false;
+           }
+           console.log(Num(arr));  */
+
+//Сделайте функцию, которая параметрами принимает 2 числа. 
+//Если эти числа равны - пусть функция вернет true, а если не равны - false.
+
+/* function Num(a, b){
+    return a == b ;
+}
+console.log(Num(3, 3)); */
+
+ //Сделайте функцию, которая параметрами принимает 2 числа. 
+ //Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
+/* function Num(a, b){
+    return 10>a+b ;
+}
+console.log(Num(3, 3)); */
+
+ //Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. 
+ //Если отрицательное - пусть функция вернет true, а если нет - false.       
+
+/* function Num(a){
+    return 0>a ;
+}
+console.log(Num(-3)); */
+
+//С помощью цикла for сформируйте строку '123456789' и запишите ее в переменную str.
+
+/* let arr = [];
+
+for(let i=1; i< 10; i++ ){
+   arr.push(i);
+}
+console.log(arr);
+let versostr = arr.reverse();
+console.log(versostr);
+let str  = arr.join('');
+console.log(str);  */
+
+
+//С помощью цикла for сформируйте строку '-1-2-3-4-5-6-7-8-9-' и запишите ее в переменную str.        
+/* let str2 = arr.join('-');
+console.log(str2); */
+
+//Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+/*     let str = '';
+for (let i = 0; i<20; i++){
+    str += "x";
+    console.log(str);
+} */
+
+//С помощью двух вложенных циклов нарисуйте следующую пирамидку:
+
+/* let str = '';
+for(let i=1 ; i<10;i++ ){
+    for(let j=1; j<=i; j++){
+        document.write(i);
+    }
+    document.write('<br>');
+} */
+
+//Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+
+/* let arr = [], n = prompt('select n', 0), i = 0;
+for ( i  ; i<n; i++){
+arr[i]= 'x';
+  for(j =0; j<i;j++){
+      arr[i]+= "x";
+      console.log(arr[i])
+
+  }
+}
+console.log(arr); */
+
+//Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+
+              
+               
