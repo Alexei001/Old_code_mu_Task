@@ -1036,5 +1036,222 @@ console.log(arr); */
 
 //Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
 
-              
-               
+              /* let arr = [], n= 10;
+
+              for(let i = 1 ; i<n; i++){
+                  let str = String(i);
+                  console.log(str);
+                  arr[i]= str;
+                  console.log(arr);
+                  for(let j=1 ;j<i; j++){
+                      arr[i] += str;
+                  }
+              }
+               console.log(arr); */
+
+//Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. 
+//Первым параметром функция принимает значение, которым заполнять массив, 
+//а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+
+             /*  let arr = [];
+              function arayFill(str, num){
+                  for (let i = 0 ; i<num; i++){
+                    arr.push(str);
+                  }
+                  return arr;
+                  //console.log(arr)
+              }
+             console.log(arayFill(55, 5)); */
+
+//Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+
+              /* let str = '1321349338726698', sum = 0, elem = 0; 
+              var arrs =str.split('');
+              for(let j=0 ; j<arrs.length; j++ ){
+                  arrs[j] = Number(arrs[j]);
+              }
+                console.log(arrs);
+            function sumOfNum(arrs) {
+                for (let i = 0; i < arrs.length; i++) {
+                    sum += arrs[i];
+                    if (sum >= 10) {
+                        elem = i + 1;
+                        console.log(elem);
+                            break;
+                    }
+                }
+
+            }
+              sumOfNum(arrs); */
+
+//Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+
+            /*  let  arr = [1, 2, 3, 4];
+             let   arr2 = [];
+                for(let i = arr.length - 1; i >= 0; i--) {
+                arr2.push(arr[i]);
+                }
+
+                console.log(arr2) */
+
+//дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. 
+//Найдите сумму элементов этого массива. 
+//Массив, конечно же, может быть произвольным. Показать решение.
+
+
+                /* let arr = [[1, 2, 3], [4, 5], [6]], sum = 0;
+                    for(let i = 0 ; i< arr.length;i++){
+                    for(j=0; j<arr[i].length; j++){
+                        sum += arr[i][j];
+                    }
+
+                }
+                console.log(sum); */ 
+
+//Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]. 
+//Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.            
+
+                /* let arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]], sum = 0;
+                for(let i = 0 ; i< arr.length;i++){
+                    for(j=0; j<arr[i].length; j++){
+                        for(k = 0; k<arr[i][j].length; k++){
+                            sum += arr[i][j][k];
+                        }
+                }
+
+                }
+                console.log(sum); */
+
+//Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа. 
+//Создайте для этого вспомогательную функцию isPositive(), 
+//которая параметром будет принимать число и возвращать true, 
+//если число положительное, и false - если отрицательное.
+
+                /* let arr =[1, -5, -6, 7, 25, 3, 6, -9,], arr1 =[];
+
+                for(let i = 0 ; i<arr.length; i++){
+                    if(isPositive(arr[i])){
+                        arr1.push(arr[i])}
+                }
+                    
+                function isPositive(num){
+                    return num >0;
+                }
+                console.log(arr1); */
+
+//Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. 
+//Если это так - пусть функция возвращает true, если не так - false.
+
+                /*function isNumberInRange (num){
+                    return num>0 && num<10;
+                }
+                console.log(isNumberInRange(5));*/
+
+// Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. 
+//Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+
+                /*let arr = [2, 3, 5, 9, -5, 10, 15, -5, 25], arr2 = [];
+                for(let i=0; i< arr.length; i++ ){
+                    if(isNUmberInRange(arr[i])){
+                        arr2.push(arr[i]);
+                    }
+                }
+
+                function isNUmberInRange(num){
+                    return num>0 && num<10
+                }
+                console.log(arr2);*/
+
+//Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+
+                /*let str = '12345', sum = 0;
+                let arr = str.split('');
+                console.log(arr);
+
+                function getDigitsSum(arr){
+                    for (let i = 0 ; i< arr.length; i++){
+                        arr[i]= Number(arr[i])
+                        console.log(arr)
+                        sum += arr[i];
+                    }
+                        return sum;
+                }
+                console.log(getDigitsSum(arr));*/
+
+// Найдите все года от 1 до 2019, сумма цифр которых равна 13. 
+//Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+            /*  var arr = []; 
+            var arr1=[];
+                for (let i=1; i<=2019; i++){
+                    arr.push(i);
+                }
+
+                for(let j = 0 ; j< arr.length; j++){
+                    if(inRange(arr[j])){
+                        arr1.push(arr[j]);
+                    }
+                }
+                    console.log(arr1);
+
+        function inRange(num) {
+            var sum = arraySum(getDigits(num)); 
+            return sum > 13;
+        }
+
+        function arraySum(arr) {
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += Number(arr[i]);
+            }
+        
+            return sum;
+        }
+
+        function getDigits(num) {
+            return String(num).split('');
+        }  */
+        
+//Сделайте функцию isEven() (even - это четный), 
+//которая параметром принимает целое число и проверяет: четное оно или нет. 
+//Если четное - пусть функция возвращает true, если нечетное - false.
+
+        /* function isEven(num){
+            return num % 2 ==0;
+        }
+        console.log(isEven(25)); */
+
+//Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. 
+//Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+       /*  let arr = [25, 24, 23, 28, 15, 26, 17];
+        let arr2 = [];
+            for(let i= 0 ; i < arr.length; i++){
+                if(isEven(arr[i])){
+                    arr2.push(arr[i]);
+                }
+            }
+            console.log(arr2);
+            function isEven(num){
+                return num % 2 ==0;
+            } */
+
+//Сделайте функцию getDivisors, 
+//которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
+             /* let arr=[];
+            function getDivisors(num){
+                for(let i =1 ; i<=num; i++){
+                    if(num % i ==0){
+                        arr.push(i)
+                    }
+                }
+                return arr;
+            }
+            console.log(getDivisors(24));  */
+
+// Дана строка. Сделайте заглавным первый символ каждого слова этой строки. 
+//Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, 
+//делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+
+            /* let str = 'определяет';
+            function ucfirst(str){
+                str[0].toUpperCase()
+            } */
