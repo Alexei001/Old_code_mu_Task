@@ -1251,12 +1251,67 @@ console.log(arr); */
 //Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, 
 //делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-            /*  let str1 = 'определяет', newstr;
-            function ucfirst(str){
-                 newstr = str.slice(0, 1); 
-                newstr.toUpperCase();
-                return newstr+str;
-            } 
-            console.log(ucfirst('paarra')); */
+               /* let str1 = prompt('some text write'), newstr;
+                let arr = str1.split(' ');
+                
+                function ucfirst(arr){
+                    for(let i = 0; i< arr.length; i++){
+                    let    str2 = arr[i].slice(0, 1);
+                        arr[i] = str2.toUpperCase() + arr[i].slice(1); 
+                        
+                    }
+                    console.log(arr.join(' '));
+                } 
 
-            console.log('hello alex');
+         ucfirst(arr); */
+
+//Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+
+                   /*  let str1 = 'var_text_hello', newstr;
+                    let arr = str1.split('_');
+
+                    function ucfirst(arr){
+                        for(let i = 0; i< arr.length; i++){
+                        let    str2 = arr[i].slice(0, 1);
+                            arr[i] = str2.toUpperCase() + arr[i].slice(1); 
+                            
+                        }
+                        console.log(arr.join('_'));
+                    } 
+
+                    ucfirst(arr); */
+
+// Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. 
+//Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск.
+ //Функция должна возвращать true или false.
+                    /* let text = 'yes';
+                    let arr=['dsads', 'adsadas', 'yes', 'dasda'];
+                    function inArray(text , arr){
+                        for (let i = 0 ; i< arr.length; i++){
+                            if(arr[i] == text){
+                                console.log('true');
+                            } else {
+                                console.log('false')
+                            } 
+                        }
+                    }
+
+                   console.log(inArray('yes', arr)); */
+
+//Дана строка, например, '123456'. Сделайте из нее '214365'.
+
+                   /*  let str = '123456', arr = [];
+                    arr = str.split('');
+                    arr.splice(0,6,[214365]);
+                    console.log(arr.join(''));
+ */
+//Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл
+       /*  let arr = ['some', 'text', 'write'];
+        function func(arr) {
+            alert(arr[0]);
+            arr.splice(0, 1);
+            if (arr.length > 0) {
+                func(arr);
+            }
+        }
+        func(arr); */
