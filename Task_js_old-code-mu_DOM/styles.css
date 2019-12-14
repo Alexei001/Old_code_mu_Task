@@ -6,3 +6,6 @@ body{
     height: 200px;
     border: 2px solid red;
 }
+table, td, tr, th{
+    border: 2px solid black;
+}

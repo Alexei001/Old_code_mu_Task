@@ -186,12 +186,12 @@ console.log(date.getFullYear());*/
         let time2 = Date.parse('2019-12-14T23:59:59');
         console.log((time2-time)/(1000) + ' second__end o the day');*/
 
-// Создайте инпут, в который пользователь вводит дату 
+//example 5 Создайте инпут, в который пользователь вводит дату 
 //своего рождения в формате '2014-12-31' (с конкретным годом). 
 //По потери фокуса выведите под инпутом сколько дней осталось 
 //до его дня рождения. Воспользуйтесь методом Date.parse.
 
-    function func(){
+   /* function func(){
         let date = document.getElementById('test').value;
         let docDate = document.getElementById('test2');
         let nowDay = new Date();
@@ -203,10 +203,20 @@ console.log(date.getFullYear());*/
         finalDate = Date.parse(finalDate);
          docDate.innerHTML= (finalDate-nowTime)/(1000*60*60*24) + ' days of you date birtdays';
 
+    }*/
+//example 6
+    /* function start(){
+        window.timerId = window.setInterval(timer, 1000);
     }
 
+    function stop(){
+        window.timerId = window.clearInterval(window.timerId);
+    }
 
-
-
-   
+    function timer(){
+        let elem = document.getElementById('test');
+        elem.value = parseInt(elem.value) + 1 ;
+    }
+ */
+    
 

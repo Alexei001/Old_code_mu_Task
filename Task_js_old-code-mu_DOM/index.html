@@ -84,11 +84,165 @@ example1 <input type="text"  placeholder="some text" id="test" onkeyup="func()" 
             <p>some text</p>
             <p>some text</p>
             <input type="submit" onclick="func()"> -->
-            <span>
+<!--example5
+                <span>
                 <h1>please selct yours date of birtdays</h1>
             </span>
             <input type="date" id="test">
             <input type="submit" value="ok" onclick="func()">
-            <h2 id="test2"></h2>
+            <h2 id="test2"></h2>-->
+
+<!-- example6
+            <input type="text" value="1" id="test">
+            <input type="submit" value="start" onclick="start()">
+            <input type="submit" value="stop" onclick="stop()"> -->
+<!--  example7           
+            <p id="test">0</p>
+            <button onclick="timer()" >clik Me!</button>
+<script>
+    let paragraph = document.querySelector('#test');
+    function timer(){
+    window.setInterval(function(){
+        paragraph.innerHTML = parseInt(paragraph.innerHTML)+1;
+    }, 1000);
+    } 
+
+</script> -->
+<!-- example 8
+        <p id="test">0</p>
+        <button onclick="startButton()" id="start1" >start</button>
+        <button onclick="stopButton()"  id = 'stop1' disabled >stop</button>
+<script>
+        let paragraph = document.querySelector('#test');
+        let start = document.querySelector('#start1');
+        let stop = document.querySelector('#stop1');
+        let id;
+        function startButton(){
+
+            id = setInterval(function(){
+            paragraph.innerHTML = parseInt(paragraph.innerHTML)+1;
+            }, 1000);
+            stop.disabled = false;
+            start.disabled = true;
+        } 
+
+        function stopButton(){
+
+            window.clearInterval(id);
+            console.log(id);
+            stop.disabled = true;
+            start.disabled = false;
+        } 
+
+</script>  -->
+<!-- example 9
+    <p id="clock"> 00:00:00</p>
+    <button onclick="go()">Go!</button>
+<script>
+    
+   
+     function go(){
+        id = setInterval(timer, 1000)
+    }
+    function timer(){
+        let clock = document.querySelector('#clock');
+       var date = new Date();
+        clock.innerHTML = ((date.getHours())+':'+(date.getMinutes())+':'+(date.getSeconds()));
+    } 
+    
+
+</script> -->
+
+<!--example 10
+     <div class="wrapper">
+        <p id="timer">10</p>
+        <p id="stopTimer"></p>
+        <button  id='button' onclick="startTimer()">start timer</button>
+</div>
+<script>
+        function startTimer(){
+            window.id = window.setInterval(timerF, 1000);
+            document.querySelector('#button').disabled = true;
+        }
+    
+        function timerF(){
+            let timer = document.querySelector('#timer');
+            let num = parseInt(timer.innerHTML)-1;
+            timer.innerHTML = num;
+            if (num == 0){
+                stopF();
+                return document.querySelector('#stopTimer').innerHTML = 'stop timer';
+            }
+        }
+        function stopF(){
+            window.clearInterval(window.id);
+        }
+       
+</script> -->
+
+<!-- example11
+     <div id="wrapper">
+    <img src="/img/1.jpg" alt="images" id="img" style="height: 200px;">
+    <img src="/img/2.jpg" alt="images" id="img1" style="height: 200px;">
+    <img src="/img/3.jpg" alt="images" id="img2" style="height: 200px;">
+    <img src="/img/4.JPG" alt="images" id="img3" style="height: 200px;">
+    <div class="button" >
+            <button onclick="startImg()" id="startbutton"> start img!</button>
+            <button onclick="stopImg()" id="stopbutton" >stop img!</button>
+    </div>
+</div>
+
+<script>
+    
+    function startImg(){
+        window.timerId = window.setInterval(function(){
+            let img = document.querySelector('#img');
+    let img1=document.querySelector('#img1');
+    let img2=document.querySelector('#img2');
+    let img3=document.querySelector('#img3');
+   let elem = img.src;
+                img.src = img1.src;
+                img1.src = img2.src;
+                img2.src = img3.src;
+                img3.src = elem;
+        }, 1000)
+    }
+    
+    function stopImg(){
+        window.clearInterval(window.timerId);
+    }
+
+</script>  -->
+<p>pina la orele 12 au ramas</p>
+<table >
+    <tr>
+       <th>hours</th>
+       <th>minutes</th>
+       <th>seconds</th>
+    </tr>
+    <tr>
+        <td id="hours" >00:</td>
+        <td id="minutes">00:</td>
+        <td id="seconds">00</td>
+    </tr>
+</table>
+    <p id="timer">00:00:00</p>
+
+</div>
+    <script>
+   
+    setInterval(function(){
+            let date = new Date();
+            let timer = document.querySelector('#timer');
+             document.querySelector('#hours').innerHTML = date.getHours()+':';
+            document.querySelector('#minutes').innerHTML = date.getMinutes()+':';
+            document.querySelector('#seconds').innerHTML = date.getSeconds();
+        timer.innerHTML = date.getHours()+ ':'+date.getMinutes()+ ':'+ date.getSeconds();
+        
+    }, 1000)
+    
+    </script>
+
+
 </body>
 </html>
