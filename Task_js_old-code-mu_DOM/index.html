@@ -213,7 +213,8 @@ example1 <input type="text"  placeholder="some text" id="test" onkeyup="func()" 
     }
 
 </script>  -->
-<p>pina la orele 12 au ramas</p>
+<!-- example12
+<p>pina la orele 00 au ramas</p>
 <table >
     <tr>
        <th>hours</th>
@@ -232,17 +233,210 @@ example1 <input type="text"  placeholder="some text" id="test" onkeyup="func()" 
     <script>
    
     setInterval(function(){
-            let date = new Date();
-            let timer = document.querySelector('#timer');
-             document.querySelector('#hours').innerHTML = date.getHours()+':';
-            document.querySelector('#minutes').innerHTML = date.getMinutes()+':';
-            document.querySelector('#seconds').innerHTML = date.getSeconds();
-        timer.innerHTML = date.getHours()+ ':'+date.getMinutes()+ ':'+ date.getSeconds();
-        
+           let now =new Date();
+           let thumorow = new Date (now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
+           let diff = Math.floor((thumorow-now)/1000);
+            let diffHours = Math.floor(diff/(60*60));
+            let diffMinutes = Math.floor((diff-diffHours *60*60)/60);
+            let difSeconds = Math.floor(diff%60);
+            document.querySelector('#hours').innerHTML = diffHours;
+            document.querySelector('#minutes').innerHTML = diffMinutes;
+            document.querySelector('#seconds').innerHTML = difSeconds;
     }, 1000)
-    
+
     </script>
+ -->
+
+ <!--example13 Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку алертом выводился ее src. Показать решение.
 
 
+    <img src="/img/1.jpg" alt="">
+    <img src="/img/2.jpg" alt="">
+    <img src="/img/3.jpg" alt="">
+
+    <script>
+    
+    let elem =document.getElementsByTagName('img');
+    console.log(elem);
+    for(let i = 0 ; i<elem.length; i++){
+        elem[i].addEventListener('click', func);
+    }
+        function func(){
+            console.log(this.src);
+        }
+    
+    </script>-->
+
+    <!--<img src="/img/1.jpg" alt="">
+    <img src="/img/3.jpg" alt="">
+    <img src="/img/4.jpg" alt="">
+
+    <script>
+    let elem = document.getElementsByTagName('img');
+    for(let i  = 0 ; i< elem.length; i++){
+        elem[i].onclick = func;
+    }
+
+
+    function func(){
+        console.log(this.getAttribute('src'));
+    }
+    </script>-->
+<!--example14  Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст. Показать решение.
+    <a href="#" title="google.com"> some text1</a>
+    <a href="#" title="mail.com"> some text2</a>
+    <a href="#" title="torrents.com"> some text3</a>
+
+        <script>
+        let aHref = document.getElementsByTagName('a');
+            for(let i = 0 ; i<aHref.length;i++){
+                aHref[i].addEventListener('mouseover', func);
+            }
+
+            function func(){
+                console.log(this.getAttribute('title'));
+                this.setAttribute('title', this.innerHTML);
+                console.log(this.getAttribute('title'));
+            }
+
+        </script>-->
+<!--example15 Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках. Показать решение.
+
+
+        <a href="http://old.code.mu/tasks/javascript/dom/prodvinutaya-rabota-s-sobytiyami-v-javascript.html" >text this ancor</a>
+        <a href="http://old.code.mu/tasks" >text this ancor</a>
+        <a href="http://old.code.mu/" >text this ancor</a>
+
+            <script>
+            let elem = document.getElementsByTagName('a');
+            for(i=0; i<elem.length; i++){
+                elem[i].addEventListener('mouseover', func);
+            }
+            function func(){
+                this.innerHTML = this.innerHTML +'(' + this.getAttribute('href')+')';
+                this.removeEventListener('mouseover', func);
+            }
+
+            </script>-->
+
+<!--example 16    Привяжите всем инпутам следующее событие - по потери фокуса каждый инпут выводит свое value в абзац с id="test". Показать решение.
+            <input type="text" value="value1">
+            <input type="text" value="value2">
+            <input type="text" value="value3">
+            <input type="text" value="value4">
+            <input type="text" value="value5">
+            <input type="text" value="value6">
+            <input type="text" value="value7">
+            <p id="testvalue"> some valoe of input text</p>
+            <script>
+            let elem = document.getElementsByTagName('input');
+            let paragraph = document.querySelector('#testvalue');
+                for(let i=0; i<elem.length;i++){
+                    elem[i].addEventListener('focusout',func)
+                }
+
+
+                function func(){
+                    paragraph.innerHTML = this.value;
+                }
+            </script>-->
+<!--example 17  Для всех инпутов сделайте так, чтобы они выводили свой value алертом при нажатии на любой из них, но только по первому нажатию. 
+Повторное нажатие на инпут не должно вызывать реакции. Показать решение.
+
+
+            <input type="text" value="some test">
+            <input type="text" value="some ">
+            <input type="text" value="hello world!">
+
+            <script>
+            
+            let elem = document.getElementsByTagName('input');
+                for(let i = 0 ; i<elem.length; i++){
+                    elem[i].addEventListener('focusin', func);
+                }
+
+                function func(){
+                    alert(this.value);
+                    this.removeEventListener('focusin', func);
+
+                    }
+            </script>-->
+
+<!--example 18 Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит. Показать решение.
+
+
+            <p>9</p>
+            <p>25</p>
+            <p>4</p>
+            <p>36</p>
+
+            <script>
+            let elem=document.getElementsByTagName('p');
+            for(let i = 0; i<elem.length;i++ ){
+                elem[i].addEventListener('click', func)
+            }
+            
+            function func(){
+                this.innerHTML= Math.sqrt(parseInt(this.innerHTML));
+            }
+            </script>-->
+<!--example 19 Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в инпуте, указывается в атрибуте data-length. 
+ Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной. Показать решение.
+
+
+            <input type="text" data-length="9">
+            <input type="text" data-length="6">
+            <input type="text" data-length="8">
+            <input type="text" data-length="5">
+
+            <script>
+            let elem = document.getElementsByTagName('input');
+
+            for(let i =0; i<elem.length; i++){
+                elem[i].addEventListener('focusout',func);
+            }
+            
+            function func(){
+                let arr = this.value.split('');
+                let lung = arr.length;
+                let datalung = parseInt(this.getAttribute('data-length'));
+                if(lung == datalung){
+                this.style.border = '3px solid green';
+                } else {
+                    this.style.border = '3px solid red';
+                }
+        }
+            </script>-->
+
+<!--example20  Даны дивы. По первому нажатию на каждый див он красится красным фоном, 
+            по второму красится обратно и так далее каждый клик происходит чередование фона. 
+            Сделайте так, чтобы было две функции: одна красит в красный цвет, 
+            другая в зеленый и они сменяли друг друга через removeEventListener. Показать решение.
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+            <script>
+            
+            let elem = document.getElementsByTagName('div');
+
+            for(let i =0 ; i<elem.length; i++){
+                elem[i].addEventListener('click',func1);
+            }
+
+
+            function func1(){
+                this.style.background = 'red';
+                this.removeEventListener('click',func1);
+                this.addEventListener('click', func2);
+            }
+
+            function func2(){
+                this.style.background = 'green';
+                this.removeEventListener('click',func2);
+                this.addEventListener('click', func1);
+
+            }
+            </script>
+        -->
 </body>
 </html>
