@@ -438,5 +438,148 @@ example1 <input type="text"  placeholder="some text" id="test" onkeyup="func()" 
             }
             </script>
         -->
+        <!-- Дан элемент #elem. Добавьте ему класс www.
+
+ Дан элемент #elem. Удалите у него класс www.
+
+ Дан элемент #elem. Проверьте наличие у него класса www.
+
+ Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.
+
+ Дан элемент #elem. Узнайте количество его классов.
+
+ Дан элемент #elem. Выведите последовательно алертом его классы. 
+
+
+            <p id="elem" class="www ooo ggg"> </p>
+<script>
+    let elem = document.querySelector('#elem');
+
+    elem.classList.remove('www');
+    console.log(elem.getAttribute('class'));
+    elem.classList.add('www1');
+    console.log(elem.getAttribute('class'));
+    console.log(elem.classList.contains('ooo'));
+    elem.classList.toggle('ooo1');
+    console.log(elem.getAttribute('class'));
+    elem.classList.toggle('ooo');
+    console.log(elem.getAttribute('class'));
+    console.log(elem.classList.length);
+    for(let i=0; i<elem.classList.length; i++){
+        console.log(elem.classList[i]);
+    }
+
+</script>-->
+<!--  Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText.
+
+ 
+    <div id="elem">hello world!</div>
+
+    <script>
+    let elem=document.querySelector('#elem');
+
+        elem.style.cssText= 'background-color:red; width:300px; height:300px; border: 2px solid black';
+    
+    </script>-->
+
+    <!--  Дан элемент #elem. По клику на него выведите название его тега.
+
+ Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
+
+ Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
+
+ 
+
+    <div id="elem" class="www" style="color: blue;">click me hoho!</div>
+    <div class="www">click me!</div>
+    <div class="www">click me!</div>
+    <div class="www">click me!</div>
+    <div class="www">click me!</div>
+    <div class="www">click me!</div>
+<script>
+    let elem=document.querySelector('#elem');
+        elem.addEventListener('click', func);
+
+        function func(){
+            this.innerHTML = this.tagName;
+            this.removeEventListener('click', func);
+            this.addEventListener('click', func2);
+        }
+
+        function func2(){
+            let tagClass = document.getElementsByTagName('div');
+            for(let i = 0 ; i<tagClass.length; i++){
+                tagClass[i].classList.add(tagClass[i].tagName);
+                
+            }
+            console.log(tagClass);
+        }
+</script>-->
+
+    <!-- 
+         Дан ol. Вставьте ему в конец li с текстом 'пункт'.
+
+  Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li. 
+  Сделайте так, чтобы к вставляемым li было привязано следующее событие: по нажатию на li она должна вывести на экран свой текст.
+
+
+     <ol>olList-hello1</ol>
+     <ol>olListhello2</ol>
+     <ol>olListhello3</ol>
+     <ul id="ul">unlist</ul>
+     <script>
+         let elem=document.getElementsByTagName('ol');
+         let elemUl = document.querySelector('#ul');
+
+            for(let i = 0 ; i<elem.length; i++){
+                let li = document.createElement('li');
+                li.innerHTML = 'punct';
+                elem[i].appendChild(li);
+                let li2 = document.createElement('li');
+                li2.innerHTML = elem[i];
+                elemUl.appendChild(li2)
+            }
+         //console.log(elem);
+         let elemLi = document.getElementsByTagName('li');
+         for(let k=0; k<elemLi.length; k++){
+             elemLi[k].addEventListener('click', function (){
+                alert(this.innerHTML);
+             })
+         }
+     console.log(elem);
+     console.log(elemLi);
+     console.log(elemLi+elem);
+     </script>-->
+
+     <!--  Дан элемент ul, а в нем li #elem. Вставьте перед элементом #elem новую li с текстом '!!!'.
+    <ul id="parent">
+        <li id="elem">hshhshs</li>
+    </ul>
+    <script>
+    let parent = document.querySelector('#parent');
+    let elem = document.querySelector('#elem');
+        let li = document.createElement('li');
+        li.innerHTML = '!!!';
+        parent.insertBefore(li, elem);
+    </script>-->
+    <!-- Дан элемент #elem. Вставьте перед ним span с текстом '!!!'.
+
+ Дан элемент #elem. Вставьте после него span с текстом '!!!'.
+
+ Дан элемент #elem. Вставьте ему в начало span с текстом '!!!'.
+
+ Дан элемент #elem. Вставьте ему в конец span с текстом '!!!'. 
+
+
+        <div id="elem">div</div>
+    <script>
+            let elem=document.querySelector('#elem');
+
+            elem.insertAdjacentHTML('beforeBegin', '<span>!!!</span>');
+            elem.insertAdjacentHTML('afterEnd', '<span>!!2!</span>');
+            elem.insertAdjacentHTML('afterBegin', '<span>!!3!</span>');
+            elem.insertAdjacentHTML('beforeEnd', '<span>!!4!</span>');-->
+
+    </script>
 </body>
 </html>
