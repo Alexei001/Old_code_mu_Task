@@ -1315,3 +1315,389 @@ console.log(arr); */
             }
         }
         func(arr); */
+       /* let arr = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h','l'];
+
+        for(let string of arr){
+            console.log(string);
+        }
+
+
+        let obj = {a: 1, b: 2, c: 3, d: 4, e: 5};
+for(let key in obj){
+    console.log(obj[key]);
+
+}*/
+
+ /*for(let i = 11; i<=1000; i++ ){
+     let str = String(i);    
+     let sum = Number(str[0])+Number(str[1]);
+     if(sum == 5){
+     console.log(i); 
+     }
+    }*/
+
+/*    let obj = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+
+     for(let key in obj){
+         console.log(key);
+     }*/
+
+
+    /* let obj = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+     let keys=[];
+     let num = [];
+
+     for( let key in obj){
+         keys.push(key);
+         num.push(obj[key]);
+     }
+console.log(keys);
+console.log(num);*/
+
+
+/*let arr = ['a', 'b', 'c', 'd', 'e'];
+let arr1={}, i = 1;
+
+
+for(let str of arr){
+    console.log(str);
+    arr1[str]=i;
+    i++;
+}
+console.log(arr1);*/
+
+//let arr = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+
+/*let arr = [[1, 2, 3], [4, 5], [6]], sum=0, arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]], arr2 = [];
+
+for(let num of arr1){
+    //console.log(num);
+    for(let num1 of num){
+        console.log(num1);
+        for(let num2 of num1){
+            arr2.push(num2);
+            sum+=num2;
+        }
+    }
+}
+console.log(sum);*/
+
+
+/* let arr= [],arr1 = [];
+
+for(let i = 0 ; i<3; i++ ){
+     arr[i]=[];
+
+     for(let k = 0; k<2;k++){
+        arr[i][k]=[];
+        for(let j = 0 ; j<5; j++){
+            arr[i][k].push(j)
+        }
+     }
+}
+console.log(arr); */
+
+/* let arrr = [],j=1
+
+ for(let i = 0 ; i<4; i++){
+     arrr[i] = [];
+        for(let k=0; k<2; k++, j++){
+            arrr[i].push(j);
+        }
+ }
+ console.log(arrr); */
+/* let  arr= [];
+ let obj = {
+	key1: {
+        a: 1, 
+        b: 2, 
+        c: {d: 3,e: 4,}, 
+        f: 5},
+	key2: {
+		g: 6, h: 7,
+	},
+}
+
+    for(let key in obj){
+        //console.log(obj[key]);
+        for(let key2 in obj[key]){
+           
+            for(let key3 in obj[key][key2])
+            arr.push(obj[key][key2]);
+            arr.splice(2,1, )
+
+        }
+    }
+    console.log(arr); */
+
+    /* let arr  = [1, 2, 5, 6, 8, 9];
+
+    function square(arr){
+        for(let elem of arr){
+            squareElement = elem*elem;
+            console.log(squareElement);
+        }
+    }
+
+    square(arr); */
+   /* let func1  = function(){
+    return 1;
+      };
+
+      let func2  = function(){
+        return 2;
+          };
+
+    console.log(func1()+func2()); */
+    /* let arr = [
+        function() {return 1;},
+        function() {return 2;},
+        function() {return 3;},
+    ];
+    
+    console.log(arr[2]()+arr[0]()+arr[1]());
+
+    for(let sum of arr){
+        sum+=sum;console.log(sum);
+    }
+ */
+
+//Сделайте объект с тремя функциями, каждая из которых будет принимать параметром массив с числами. Сделайте так, 
+//чтобы первая функция возвращала сумму элементов массива, вторая функция - сумму квадратов, а третья - сумму кубов.
+/* let arr =[2,3,4,1,3,5,6];
+ let obj ={
+     func1: function (arr){
+        let sum = 0;
+       for (let num of arr){
+            //console.log(num)
+           sum += num;
+       }return sum;},
+     func2: function (arr){
+        let square = 1; 
+            for (let num of arr){
+                //console.log(num)
+               square =num*num;
+               square+=square; 
+           }return square;},
+     func3: function (arr){
+        let square = 1; 
+            for (let num of arr){
+                //console.log(num)
+               square =num*num*num;
+               square+=square; 
+           }return square;},
+ };
+
+ for(let key in obj){
+     console.log(obj[key](arr));
+    } */
+ 
+ /* function test (func1, func2, func3){
+     console.log(func1()+func2()+func3());
+ };
+
+ let get1=()=>{return 1;} ;
+
+ let get2=function (){
+     return 2;
+ };
+
+ let get3=function(){
+     return 36;
+ };
+ test(get1, get2, get3);  */
+
+/* 
+ function test(num1,num2){
+     console.log(num1(1)+num2(3));
+ }
+
+function func1(num){
+    return num;
+}
+function func2(num2){
+    return num2;
+}
+
+test(func1,func2); */
+
+
+/* function test(num, func1, func2){
+    console.log(func1(num), func2(num));
+}
+
+
+test(3,function(num1){return num1*num1;},function(num2){return num2*num2*num2;}) */
+
+
+/* let arr=[2,3,4],arr2=[];
+
+ function test(arr, func){
+     let num1;
+    for(let num of arr){
+       // arr2.push(func(num))
+       num1=func(num);
+       num=num1;
+    }
+    return arr;
+} 
+
+let result=test(arr, function(num){return num*num;});
+
+console.log(result); */
+/* let test = function func() {
+	alert('!');
+	 // вызываем сами себя
+};
+test();
+ */
+
+/*  function func(num1, num2){
+     function square(num){
+         return num*num;
+     }
+
+     return (square(num1)+(square(num2)*num2));
+
+ }
+
+ console.log(func(2,3)); */
+
+/*  function test(num) {
+	function func(localNum) {
+		localNum = 2;
+	}
+	
+	func(num);
+	alert(num);
+}
+
+test(1);
+ */
+
+/* function test(num) {
+	function func(num) {
+		num = 2;
+	}
+	
+	func(num);
+	alert(num);
+}
+
+test(1); */
+
+
+/* function func1(){
+    return function(){
+        return 1;
+    }
+}
+function func2(){
+    return function(){
+        return 52;
+    }
+}
+
+console.log(func1()()+func2()()); */
+
+
+/* function func1(){
+    return function(){
+        return function(){
+            return function(){
+                  return '!';
+            };
+        };
+        
+    };
+    
+}
+console.log(func1()()()()); */
+
+/* function func1(num1){
+    return function(num2){
+        return function(num3){
+            return function(num4){
+                return `[${num1},${num2},${num3},${num4}]`;
+            }
+        }
+    }
+}
+
+console.log(func1(2)(3)(4)(5)); */
+/* function test() {
+	let num = 1;
+	
+	return function() {
+		return num;
+	}
+}
+
+let num = 2;
+let func = test();
+alert(func()); */
+
+/* function func1(){
+    let num = 10; 
+    return function(){
+        
+       if (num == 0) {
+           console.log('warning number is zero');
+
+       }else{
+           console.log(num);
+           num--;
+       }
+    }
+}
+
+
+let test=func1();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test(); */
+
+/* function func() {
+	let num = 0;
+	
+	return function() {
+		alert(num);
+		num++;
+	};
+};
+
+let test = func;
+
+test()();
+test()();
+test()(); */
+
+/* let counter = 0;
+		
+function test() {
+	return function() {
+		alert(counter);
+		counter++;
+	};
+};
+
+let func = test;
+
+let func1 = func();
+let func2 = func();
+func1();
+ func2();
+func1();
+func2(); */
