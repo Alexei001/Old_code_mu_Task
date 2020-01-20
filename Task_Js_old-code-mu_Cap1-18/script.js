@@ -1701,3 +1701,346 @@ func1();
  func2();
 func1();
 func2(); */
+/* let century ;
+function centuryFromYear(year){
+    if (year % 100 == 0){
+        century = Math.floor(year/100);
+    } else {
+        century = (Math.floor(year/100)+1);
+    }
+    return century;
+}
+
+    console.log(centuryFromYear(2001)); */
+//Given the string, check if it is a palindrome.
+
+/* function checkPalindrome(inputString) {
+  let arrStr=[],result;
+  arrStr=inputString.split('');
+    for(let i = 0,k=arrStr.length-1; i<arrStr.length, k>=0; i++, --k){
+         if(arrStr[i]==arrStr[k]){
+            result = true;
+        }else{
+            result=false;
+           
+        } 
+        if(result == false) break;
+         console.log(arrStr[i]);
+        console.log(arrStr[k]); 
+    }
+    return result;
+}
+
+console.log(checkPalindrome('aaabaaaa'));*/
+//checkPalindrome('aaabaaaa'); 
+
+
+/*  function each(arr, callback){
+    let result = [];
+    for(let elem of arr){
+        result.push(callback(elem));
+    }
+    return result;
+} 
+
+ function callback(elem){
+    let line=[];
+    line=elem.split('').reverse();
+    line[0]=line[0].toUpperCase();
+    line = line.join('');
+    return line;
+    
+} 
+
+
+console.log(each(['one', 'two', 'three', 'asdgahs', 'sdasad'], callback)); */
+
+/* function filter(arr, callback){
+    let result=[];
+    for(let elem of arr){
+        if(callback(elem)){
+            result.push(elem)
+        }
+    }
+    return result;
+} */
+
+/* function callback(elem){
+    if(elem % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+} */
+
+/* function callback(elem){
+    let arrElem=elem.split('');
+    if(arrElem.length >=1 && arrElem.length <=3){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(filter(['one', 'two', 'thr', 'asdgahs', 'ad'], callback)); */
+
+
+/* 
+function every(arr,callback){
+    let result;
+    for(let elem of arr){
+       if(callback(elem)){
+           result=true;
+       }else{
+           result=false;
+           break;
+       }
+    }
+    return result;
+}
+
+function callback(elem){
+    if(elem>0){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(every([1, 2, +3, 4, -5],callback)); */
+
+/* function alternate(arr, callback1,callback2){
+    let result=[];
+    for(let i = 0 ; i< arr.length;i++){
+        if((i+1) %2 == 0){
+            result.push(callback2(arr[i]));
+        }else{
+            result.push(callback1(arr[i]));
+        }
+    }
+    return result;
+}
+function callback1(elem){
+    return elem+'-1element';
+}
+function callback2(elem){
+    return elem+'-2element';
+}
+
+console.log(alternate([1,2,3,5,8,6], callback1, callback2)); */
+
+
+/* let every=(arr, callback)=>{
+    let final, i=0;
+    for(let elem of arr){
+        if(callback(elem, i)){
+            final= true;
+            i++;
+        }else{
+            final= false;
+            break;
+        }
+    }
+    return final;
+}
+
+let callback=(elem, index)=>{
+     (elem * index > 10);
+}
+console.log(every([1, 2, 3, 4, 5], callback)); */
+//fybonacci keys
+/* let arrNum=[];
+
+
+function func(prevPrevNum, prevNum){
+    let interNum=prevNum;
+    prevNum+=prevPrevNum;
+    prevPrevNum=interNum;
+    arrNum.push(prevNum);
+    (prevNum <=200)? func(prevPrevNum, prevNum):
+    return arrNum;
+}
+
+console.log(func(1,2)); */
+
+/* function getDigitsSum(num) {
+	return getSum(getDigits(num));
+}
+
+function getSum(arr) {
+	let sum = 0;
+	
+	for (let elem of arr) {
+		sum += Number(elem);
+	}
+	
+	return sum;
+}
+
+function getDigits(num) {
+	return String(num).split('');
+}
+function reduceNum(num) {
+	let sum = getDigitsSum(num);
+	
+	if (sum <= 9) {
+		return sum;
+	} else {
+		return reduceNum(sum);
+	}
+}
+
+console.log(reduceNum(569874568215698)); */
+
+/* function func(arr) {
+	for (let elem of arr) {
+		if (typeof elem == 'object') {
+			func(elem);
+		} else {
+			console.log(elem);
+		}
+	}
+}
+
+func([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]); */
+
+//Дан многомерный объект произвольного уровня вложенности, например, такой:
+
+//let obj={a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
+//Выведите на экран все элементы-массивы, содержащие внутри себя только примитивы.
+
+/* let func=(obj)=>{
+    for(let elem in obj){
+        (typeof obj[elem] == 'object')? (func(obj[elem])): console.log(obj[elem]);    
+    }
+}
+func(obj); */
+
+//Дан многомерный массив произвольного уровня вложенности. 
+//Подсчитайте с помощью рекурсии самый максимальный уровень вложенности этого массива.
+
+/* let arr = [1, [2, 7, 8], [3, 4], [5, [6, 7],[8,9,[35,9,[258]]]]], i=0;
+
+let func=(arr)=>{
+    for(let elem of arr){
+        if(typeof elem == 'object'){
+        func(elem);
+        i++;
+        }else{
+      console.log(elem);
+        }
+    }
+}
+
+func(arr);
+console.log(`maxim number of arrays ${i}`); */
+/* let arr = [1, 36, 9, 4, 25];
+
+let result = arr.map(function(elem) {
+	return Math.sqrt(elem);
+});
+
+console.log(result); */
+/* let arr=['Catalinka','dasda','dawd','dawd'];
+let final =document.getElementById('Name');
+let result=arr.map((elem)=>{
+    final.innerHTML='catalinka pitaciok';
+    return elem+'!';
+});
+
+console.log(result); */
+
+/* let arr=['uno','two','tree','four','five'];
+let result =arr.map((elem)=>{
+    return elem.split('').reverse().join('');
+});
+console.log(result); */
+
+/* let arr = ['123', '456', '789'];
+
+let result=arr.map((elem)=>{
+    return elem.split('');
+});
+
+console.log(result); */
+
+/* let arr = ['a', 'b', 'c', 'd', 'e'];
+
+let result = arr.map(function(elem, index) {
+	return elem + index;
+});
+
+console.log(result); */
+
+/* let arr = [1, 2, 6 ,8 ,9];
+
+let result = arr.map((elem, index)=>{
+    let final= elem*index;
+    return final+`index is ${index} an number is ${elem}`;
+});
+
+console.log(result); */
+
+/* let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+let result = arr.map(function(elem){
+   return elem.map(function(num){
+        return num*num;
+   });
+});
+console.log(result); */
+/* let arr = ['a', 'b', 'c', 'd', 'e'];
+
+arr.forEach(function(elem, index) {
+	document.write(index + '. ' + elem + '<br>');
+}); */
+
+ /* let arr = [1, 2, 3, 4, 5];
+let square=0; */
+
+/*arr.forEach(function(elem){
+    square= square+(elem*elem);
+    return square;
+});*/
+
+//console.log(square);
+
+/* let arr = [1, 2, -3, 4, -5];
+console.log(arr.filter(eleme=>eleme>0 )); */
+
+/* let arr = [1, 2, -3, 4, -5,22,36,69,2,56];
+
+console.log(arr.filter(element=>element>4 && element<56)); */
+
+/* let arr=['unoasd','twods','treeas','fourds','fives'];
+
+console.log(arr.filter(element=>element.length>5)); */
+/* let arr=[1, 2, [3, 4], 5, [6, 7]];
+console.log(arr.filter(element=>typeof element!=='object')); */
+
+/* let arr = [1, 2, 3, 4, -5,-8,-9,-10,-12];
+let result=arr.filter(element=>element<0);
+console.log(result); */ 
+
+/*let arr=[1,2,6];
+console.log(arr.every(function(element,index){
+    let result = element*index;
+    if(result<30){
+        return true;
+    }else{
+        return false;
+    }
+}));*/
+
+
+//console.log(Math.max(spread(arr)));
+//console.log('hello world!!');-
+
+let arr =[1,2,3,7];
+function func(...rest){
+    let sum=0;
+    for(let element of rest){
+        sum+=element;
+    }
+    return sum;
+}
+console.log(func(1,2,3));
+
