@@ -9,577 +9,224 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h2 class="zzz">Заголовок с классом zzz.</h2>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p class="zzz">Абзац с классом zzz.</p>
-    <p>Просто абзац, не поменяется.</p>
-    <button onclick="func()"> click me!</button> -->
-
-
-    <!-- <p id="text"> on click this text, you revrite text</p>
-    <button onclick="func()">click Me!</button> -->
-
-<!-- <p> on <h3> -->
-    <!-- <p id="test1">some text</p>
-    <button onclick="clickMe()"> Click Me!</button> -->
-   
-
-<!-- sum two numbers -->    
-    <!--<div style="display: flex;">
-        <input type="text" id="input1"> +
-        <input type="text"  id="input2"> 
-        <p id="p"> = </p>
-      
-    </div>
-    <br>
-          <button onclick="result()"> click to show result</button> -->
-
-<!--  rewrite the html text 
-
-    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
-    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
-    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
-    <p>При нажатии на кнопку текст в каждом абзаце поменяется.</p>
-    <h2>А я h2 и не поменяюсь!</h2>
-    <button onclick="test()"> click me!</button> -->
-
-<!-- Дан HTML код (см. под задачей). Поменяйте содержимое элементов 
-с классом www на их порядковый номер в коде. 
-        <h2 class="www">Заголовок с классом www.</h2>
-        <p class="www">Абзац с классом www.</p>
-        <p class="www">Абзац с классом www.</p>
-        <p>Просто абзац, не поменяется.</p>
-        <input type="submit" onclick="func()"> -->
-
-<!-- setAtribute, removeAtribute, hasAttribute, getAttribute 
-           <p class="my-class" id="class">paragraph with my-class</p>
-        <button onclick="func()">click me1!</button>
-        <button onclick="func2()">click me2!</button> -->
-<!-- 
-example1 <input type="text"  placeholder="some text" id="test" onkeyup="func()" style="float: left;">
-                <p id="test1" style="float: right;"> </p> -->
-
-<!-- example2
-           <a href="google.md" >some link</a> <br><br>
-           <a href="yandex.ru" >some link</a> <br><br>
-           <a href="msil.ru" >some link</a> <br><br>
-           
-            <button onclick="funnc()">click me</button> -->
-<!-- example3
-            <p id="test">some text</p>
-            <button onclick="func()" id="button">click me!</button> -->
-<!--  example4 
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <p>some text</p>
-            <input type="submit" onclick="func()"> -->
-<!--example5
-                <span>
-                <h1>please selct yours date of birtdays</h1>
-            </span>
-            <input type="date" id="test">
-            <input type="submit" value="ok" onclick="func()">
-            <h2 id="test2"></h2>-->
-
-<!-- example6
-            <input type="text" value="1" id="test">
-            <input type="submit" value="start" onclick="start()">
-            <input type="submit" value="stop" onclick="stop()"> -->
-<!--  example7           
-            <p id="test">0</p>
-            <button onclick="timer()" >clik Me!</button>
-<script>
-    let paragraph = document.querySelector('#test');
-    function timer(){
-    window.setInterval(function(){
-        paragraph.innerHTML = parseInt(paragraph.innerHTML)+1;
-    }, 1000);
-    } 
-
-</script> -->
-<!-- example 8
-        <p id="test">0</p>
-        <button onclick="startButton()" id="start1" >start</button>
-        <button onclick="stopButton()"  id = 'stop1' disabled >stop</button>
-<script>
-        let paragraph = document.querySelector('#test');
-        let start = document.querySelector('#start1');
-        let stop = document.querySelector('#stop1');
-        let id;
-        function startButton(){
-
-            id = setInterval(function(){
-            paragraph.innerHTML = parseInt(paragraph.innerHTML)+1;
-            }, 1000);
-            stop.disabled = false;
-            start.disabled = true;
-        } 
-
-        function stopButton(){
-
-            window.clearInterval(id);
-            console.log(id);
-            stop.disabled = true;
-            start.disabled = false;
-        } 
-
-</script>  -->
-<!-- example 9
-    <p id="clock"> 00:00:00</p>
-    <button onclick="go()">Go!</button>
-<script>
-    
-   
-     function go(){
-        id = setInterval(timer, 1000)
-    }
-    function timer(){
-        let clock = document.querySelector('#clock');
-       var date = new Date();
-        clock.innerHTML = ((date.getHours())+':'+(date.getMinutes())+':'+(date.getSeconds()));
-    } 
-    
-
-</script> -->
-
-<!--example 10
-     <div class="wrapper">
-        <p id="timer">10</p>
-        <p id="stopTimer"></p>
-        <button  id='button' onclick="startTimer()">start timer</button>
-</div>
-<script>
-        function startTimer(){
-            window.id = window.setInterval(timerF, 1000);
-            document.querySelector('#button').disabled = true;
-        }
-    
-        function timerF(){
-            let timer = document.querySelector('#timer');
-            let num = parseInt(timer.innerHTML)-1;
-            timer.innerHTML = num;
-            if (num == 0){
-                stopF();
-                return document.querySelector('#stopTimer').innerHTML = 'stop timer';
-            }
-        }
-        function stopF(){
-            window.clearInterval(window.id);
-        }
-       
-</script> -->
-
-<!-- example11
-     <div id="wrapper">
-    <img src="/img/1.jpg" alt="images" id="img" style="height: 200px;">
-    <img src="/img/2.jpg" alt="images" id="img1" style="height: 200px;">
-    <img src="/img/3.jpg" alt="images" id="img2" style="height: 200px;">
-    <img src="/img/4.JPG" alt="images" id="img3" style="height: 200px;">
-    <div class="button" >
-            <button onclick="startImg()" id="startbutton"> start img!</button>
-            <button onclick="stopImg()" id="stopbutton" >stop img!</button>
-    </div>
-</div>
-
-<script>
-    
-    function startImg(){
-        window.timerId = window.setInterval(function(){
-            let img = document.querySelector('#img');
-    let img1=document.querySelector('#img1');
-    let img2=document.querySelector('#img2');
-    let img3=document.querySelector('#img3');
-   let elem = img.src;
-                img.src = img1.src;
-                img1.src = img2.src;
-                img2.src = img3.src;
-                img3.src = elem;
-        }, 1000)
-    }
-    
-    function stopImg(){
-        window.clearInterval(window.timerId);
-    }
-
-</script>  -->
-<!-- example12
-<p>pina la orele 00 au ramas</p>
-<table >
-    <tr>
-       <th>hours</th>
-       <th>minutes</th>
-       <th>seconds</th>
-    </tr>
-    <tr>
-        <td id="hours" >00:</td>
-        <td id="minutes">00:</td>
-        <td id="seconds">00</td>
-    </tr>
-</table>
-    <p id="timer">00:00:00</p>
-
-</div>
+   <!--  <input type="submit" onclick="func()">
     <script>
-   
-    setInterval(function(){
-           let now =new Date();
-           let thumorow = new Date (now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
-           let diff = Math.floor((thumorow-now)/1000);
-            let diffHours = Math.floor(diff/(60*60));
-            let diffMinutes = Math.floor((diff-diffHours *60*60)/60);
-            let difSeconds = Math.floor(diff%60);
-            document.querySelector('#hours').innerHTML = diffHours;
-            document.querySelector('#minutes').innerHTML = diffMinutes;
-            document.querySelector('#seconds').innerHTML = difSeconds;
-    }, 1000)
+        function func(){
+            alert('you click this button');
+        };
+        
+    </script> -->
+    <!-- <input type="text" id='text' value="&&&">
+    <input type="submit" onclick="func()">
+<script>
+    let elem=document.getElementById('text');
+    function func(){
+        elem.value='??????';
+        return alert(elem.value);
+    }
 
-    </script>
+</script>
  -->
 
- <!--example13 Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку алертом выводился ее src. Показать решение.
 
-
-    <img src="/img/1.jpg" alt="">
-    <img src="/img/2.jpg" alt="">
-    <img src="/img/3.jpg" alt="">
-
-    <script>
-    
-    let elem =document.getElementsByTagName('img');
-    console.log(elem);
-    for(let i = 0 ; i<elem.length; i++){
-        elem[i].addEventListener('click', func);
-    }
-        function func(){
-            console.log(this.src);
-        }
-    
-    </script>-->
-
-    <!--<img src="/img/1.jpg" alt="">
-    <img src="/img/3.jpg" alt="">
-    <img src="/img/4.jpg" alt="">
-
-    <script>
-    let elem = document.getElementsByTagName('img');
-    for(let i  = 0 ; i< elem.length; i++){
-        elem[i].onclick = func;
-    }
-
-
-    function func(){
-        console.log(this.getAttribute('src'));
-    }
-    </script>-->
-<!--example14  Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст. Показать решение.
-    <a href="#" title="google.com"> some text1</a>
-    <a href="#" title="mail.com"> some text2</a>
-    <a href="#" title="torrents.com"> some text3</a>
-
-        <script>
-        let aHref = document.getElementsByTagName('a');
-            for(let i = 0 ; i<aHref.length;i++){
-                aHref[i].addEventListener('mouseover', func);
-            }
-
-            function func(){
-                console.log(this.getAttribute('title'));
-                this.setAttribute('title', this.innerHTML);
-                console.log(this.getAttribute('title'));
-            }
-
-        </script>-->
-<!--example15 Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках. Показать решение.
-
-
-        <a href="http://old.code.mu/tasks/javascript/dom/prodvinutaya-rabota-s-sobytiyami-v-javascript.html" >text this ancor</a>
-        <a href="http://old.code.mu/tasks" >text this ancor</a>
-        <a href="http://old.code.mu/" >text this ancor</a>
-
-            <script>
-            let elem = document.getElementsByTagName('a');
-            for(i=0; i<elem.length; i++){
-                elem[i].addEventListener('mouseover', func);
-            }
-            function func(){
-                this.innerHTML = this.innerHTML +'(' + this.getAttribute('href')+')';
-                this.removeEventListener('mouseover', func);
-            }
-
-            </script>-->
-
-<!--example 16    Привяжите всем инпутам следующее событие - по потери фокуса каждый инпут выводит свое value в абзац с id="test". Показать решение.
-            <input type="text" value="value1">
-            <input type="text" value="value2">
-            <input type="text" value="value3">
-            <input type="text" value="value4">
-            <input type="text" value="value5">
-            <input type="text" value="value6">
-            <input type="text" value="value7">
-            <p id="testvalue"> some valoe of input text</p>
-            <script>
-            let elem = document.getElementsByTagName('input');
-            let paragraph = document.querySelector('#testvalue');
-                for(let i=0; i<elem.length;i++){
-                    elem[i].addEventListener('focusout',func)
-                }
-
-
-                function func(){
-                    paragraph.innerHTML = this.value;
-                }
-            </script>-->
-<!--example 17  Для всех инпутов сделайте так, чтобы они выводили свой value алертом при нажатии на любой из них, но только по первому нажатию. 
-Повторное нажатие на инпут не должно вызывать реакции. Показать решение.
-
-
-            <input type="text" value="some test">
-            <input type="text" value="some ">
-            <input type="text" value="hello world!">
-
-            <script>
-            
-            let elem = document.getElementsByTagName('input');
-                for(let i = 0 ; i<elem.length; i++){
-                    elem[i].addEventListener('focusin', func);
-                }
-
-                function func(){
-                    alert(this.value);
-                    this.removeEventListener('focusin', func);
-
-                    }
-            </script>-->
-
-<!--example 18 Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит. Показать решение.
-
-
-            <p>9</p>
-            <p>25</p>
-            <p>4</p>
-            <p>36</p>
-
-            <script>
-            let elem=document.getElementsByTagName('p');
-            for(let i = 0; i<elem.length;i++ ){
-                elem[i].addEventListener('click', func)
-            }
-            
-            function func(){
-                this.innerHTML= Math.sqrt(parseInt(this.innerHTML));
-            }
-            </script>-->
-<!--example 19 Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в инпуте, указывается в атрибуте data-length. 
- Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной. Показать решение.
-
-
-            <input type="text" data-length="9">
-            <input type="text" data-length="6">
-            <input type="text" data-length="8">
-            <input type="text" data-length="5">
-
-            <script>
-            let elem = document.getElementsByTagName('input');
-
-            for(let i =0; i<elem.length; i++){
-                elem[i].addEventListener('focusout',func);
-            }
-            
-            function func(){
-                let arr = this.value.split('');
-                let lung = arr.length;
-                let datalung = parseInt(this.getAttribute('data-length'));
-                if(lung == datalung){
-                this.style.border = '3px solid green';
-                } else {
-                    this.style.border = '3px solid red';
-                }
-        }
-            </script>-->
-
-<!--example20  Даны дивы. По первому нажатию на каждый див он красится красным фоном, 
-            по второму красится обратно и так далее каждый клик происходит чередование фона. 
-            Сделайте так, чтобы было две функции: одна красит в красный цвет, 
-            другая в зеленый и они сменяли друг друга через removeEventListener. Показать решение.
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-            <script>
-            
-            let elem = document.getElementsByTagName('div');
-
-            for(let i =0 ; i<elem.length; i++){
-                elem[i].addEventListener('click',func1);
-            }
-
-
-            function func1(){
-                this.style.background = 'red';
-                this.removeEventListener('click',func1);
-                this.addEventListener('click', func2);
-            }
-
-            function func2(){
-                this.style.background = 'green';
-                this.removeEventListener('click',func2);
-                this.addEventListener('click', func1);
-
-            }
-            </script>
-        -->
-        <!-- Дан элемент #elem. Добавьте ему класс www.
-
- Дан элемент #elem. Удалите у него класс www.
-
- Дан элемент #elem. Проверьте наличие у него класса www.
-
- Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.
-
- Дан элемент #elem. Узнайте количество его классов.
-
- Дан элемент #elem. Выведите последовательно алертом его классы. 
-
-
-            <p id="elem" class="www ooo ggg"> </p>
+<!--  <input type="text"  id ='number'placeholder="please type some number">
+<input type="submit" onclick="square()">
 <script>
-    let elem = document.querySelector('#elem');
+function square(){
+    let number=document.getElementById('number');
+    let square=(Number(number.value))*2;
+    return alert(square);
+}
+</script> -->
 
-    elem.classList.remove('www');
-    console.log(elem.getAttribute('class'));
-    elem.classList.add('www1');
-    console.log(elem.getAttribute('class'));
-    console.log(elem.classList.contains('ooo'));
-    elem.classList.toggle('ooo1');
-    console.log(elem.getAttribute('class'));
-    elem.classList.toggle('ooo');
-    console.log(elem.getAttribute('class'));
-    console.log(elem.classList.length);
-    for(let i=0; i<elem.classList.length; i++){
-        console.log(elem.classList[i]);
+
+<!-- <input type="text" id="value1" value="????"><input type="text" id="value2" value="!!!!!">
+<button onclick=" element()">click Me</button>
+
+
+<script>
+function element(){
+    let element1=document.getElementById('value1');
+    let element2=document.getElementById('value2');
+    let value1=element1.value;
+    let value2=element2.value;
+    element2.value=value1;
+    element1.value=value2;
+}
+</script> -->
+
+<!-- <input type="submit" name="button" id="text" value="some text" onclick="func(this)">
+<script>
+
+    function func(elem){
+        elem.value='new text';
+        return console.log(elem);
+
     }
 
-</script>-->
-<!--  Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText.
-
- 
-    <div id="elem">hello world!</div>
-
-    <script>
-    let elem=document.querySelector('#elem');
-
-        elem.style.cssText= 'background-color:red; width:300px; height:300px; border: 2px solid black';
-    
-    </script>-->
-
-    <!--  Дан элемент #elem. По клику на него выведите название его тега.
-
- Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
-
- Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
-
- 
-
-    <div id="elem" class="www" style="color: blue;">click me hoho!</div>
-    <div class="www">click me!</div>
-    <div class="www">click me!</div>
-    <div class="www">click me!</div>
-    <div class="www">click me!</div>
-    <div class="www">click me!</div>
+</script> -->
+<!-- <input type="text" value="some text" id="text">
+<button style="color:red" onclick="func(this)">clik me!</button>
 <script>
-    let elem=document.querySelector('#elem');
-        elem.addEventListener('click', func);
-
-        function func(){
-            this.innerHTML = this.tagName;
-            this.removeEventListener('click', func);
-            this.addEventListener('click', func2);
-        }
-
-        function func2(){
-            let tagClass = document.getElementsByTagName('div');
-            for(let i = 0 ; i<tagClass.length; i++){
-                tagClass[i].classList.add(tagClass[i].tagName);
-                
-            }
-            console.log(tagClass);
-        }
+function func(element){
+    element.style.color='green';
+    let element1=document.getElementById('text').style;
+    element1.color='red';
+}
 </script>-->
 
-    <!-- 
-         Дан ol. Вставьте ему в конец li с текстом 'пункт'.
+<!-- <button id="block" onclick="block()">block</button>
+<button id="deblock" onclick="deblock()">deblock</button>
+<input type="text" value="some text" id="text" >
 
-  Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li. 
-  Сделайте так, чтобы к вставляемым li было привязано следующее событие: по нажатию на li она должна вывести на экран свой текст.
+<script>
+    let element=document.getElementById('text');
+function block(){
+    return element.disabled=true;
+}
+function deblock(){
+    return element.disabled=false;
+}
+
+</script> -->
+<!-- <div onmouseout="onClick()" class="div1">
+
+some text
+
+</div>
+<script>
+function onClick(){
+    return alert('hello!');
+}
 
 
-     <ol>olList-hello1</ol>
-     <ol>olListhello2</ol>
-     <ol>olListhello3</ol>
-     <ul id="ul">unlist</ul>
-     <script>
-         let elem=document.getElementsByTagName('ol');
-         let elemUl = document.querySelector('#ul');
+</script> -->
 
-            for(let i = 0 ; i<elem.length; i++){
-                let li = document.createElement('li');
-                li.innerHTML = 'punct';
-                elem[i].appendChild(li);
-                let li2 = document.createElement('li');
-                li2.innerHTML = elem[i];
-                elemUl.appendChild(li2)
-            }
-         //console.log(elem);
-         let elemLi = document.getElementsByTagName('li');
-         for(let k=0; k<elemLi.length; k++){
-             elemLi[k].addEventListener('click', function (){
-                alert(this.innerHTML);
-             })
-         }
-     console.log(elem);
-     console.log(elemLi);
-     console.log(elemLi+elem);
-     </script>-->
+<!-- <img src="./img/1.jpg" alt="images" id='images'>
+<input type="submit" onclick="func()">
+<script>
+function func(){
+    return document.getElementById('images').src='./img/2.jpg';
+}
+</script> -->
 
-     <!--  Дан элемент ul, а в нем li #elem. Вставьте перед элементом #elem новую li с текстом '!!!'.
-    <ul id="parent">
-        <li id="elem">hshhshs</li>
-    </ul>
+<!-- <input type="submit" onclick="func(this)" value="click me!">
+<script>
+    func=(element=>element.value='hello');
+    /* function func(element){
+        return element.value='hello!';
+    } */
+</script> -->
+
+<!-- <img src="./img/3.jpg" alt="images" onclick="func(this)">
+<script>
+    func=(Element)=>Element.src='./img/2.jpg';
+
+</script> -->
+<!-- <input type="submit" onclick="func()">
+<input type="text" id ='text' value="some text">
+<script>
+    func=()=>document.getElementById('text').style.color='red';
+</script> -->
+<!-- <input type="text" value='some text!' id="text"><input type="submit" value="click me first" onclick="func1()">
+<input type="submit" value="click me second" onclick="func2()">
+<script>
+func1=()=>document.getElementById('text').style.display='none';
+func2=()=>document.getElementById('text').style.display='block';
+</script> -->
+
+<!-- input type="text" value="some text!" id='text'>
+<input type="submit" onclick="func()">
+ <script>
+func=()=>{
+    let element=document.getElementById('text');
+    element.value='oops new color ad css efect';
+    element.style.color='red';
+    element.style.border='2px solid red';
+    element.style.borderRadius ='20px';
+    element.style.width ='200px';
+    element.style.height ='200px';
+}
+</script> -->
+  <!--   <p>this is input paragraph</p>
+    <input type="submit" value = 'click to unblock' style="display: none;" onclick="func1(this)" id="element1">
+    <input type="submit" value="click to block! " onclick="func(this)" id="element2">
     <script>
-    let parent = document.querySelector('#parent');
-    let elem = document.querySelector('#elem');
-        let li = document.createElement('li');
-        li.innerHTML = '!!!';
-        parent.insertBefore(li, elem);
-    </script>-->
-     Дан элемент #elem. Вставьте перед ним span с текстом '!!!'.
+        let element1=document.getElementById('element1');
+        let element2=document.getElementById('element2');
+    func=(element)=>{
+        element.value='oops this button is block';
+        element1.style.display='block';
+        return element.disabled=true;
+    }
+    func1=(element)=>{
+        element.value='oops this button is block';
+        element1.style.display='none';
+        return element2.disabled=false;
+    }
+    </script> -->
 
- Дан элемент #elem. Вставьте после него span с текстом '!!!'.
+   <!--  <input type="submit" id = 'test' value="0" onclick="func(this)" style="width: 50px;">
+<script>
+func=(element)=>{
+    element.value++;
+}
+</script> -->
+<!-- <input type="text" value="some text" class="asas sas sas" id='test'>
+<input type="submit" onclick="document.getElementById('test').value=document.getElementById('test').classList"> -->
 
- Дан элемент #elem. Вставьте ему в начало span с текстом '!!!'.
+<!-- <input type="text" value="heloo!" id='text1'>
+<input type="text" value="bye" id='text2'>
+<input type="submit" onclick="func()">
+<script>
+func=()=>{
+    let value1=document.getElementById('text1');
+    let value2=document.getElementById('text2');
+    let value11=value1.value;
+    let value22=value2.value;
+    value2.value=value11;
+    value1.value=value22;
 
- Дан элемент #elem. Вставьте ему в конец span с текстом '!!!'. 
+}
+</script> -->
+<!-- 
+ <input type="text" placeholder="place some number"id='input1'>
+<input type="text" placeholder="hier is yours result" id="input2" disabled>
+<input type="submit" onclick="func()">
+<script>
+func=()=>{
+    let number=Number(document.getElementById('input1').value);
+    (number === NaN)? document.getElementById('input2').value='not a numbdsadaer': 
+    document.getElementById('input2').value=((number))*((number));
+    //return document.getElementById('input2').value=(Number(number))*(Number(number));
+}
+</script>  -->
+<!-- <input type="text" id="result">
+<input type="submit" onclick="func(this)" value="*">
+<input type="submit" onclick="func(this)" value="-">
+<input type="submit" onclick="func(this)" value="+">
+<input type="submit" onclick="func(this)" value="/">
+<input type="submit" onclick="func(this)" value="0">
+<input type="submit" onclick="func(this)" value="1">
+<input type="submit" onclick="func(this)" value="2">
+<input type="submit" onclick="func(this)" value="3">
+<input type="submit" onclick="func(this)" value="4">
+<input type="submit" onclick="func(this)" value="5">
+<input type="submit" onclick="func(this)" value="6">
+<input type="submit" onclick="func(this)" value="7">
+<input type="submit" onclick="func(this)" value="8">
+<input type="submit" onclick="func(this)" value="9">
 
-
-        <div id="elem">div</div>
-    <script>
-            let elem=document.querySelector('#elem');
-
-            elem.insertAdjacentHTML('beforeBegin', '<span>!!!</span>');
-            elem.insertAdjacentHTML('afterEnd', '<span>!!2!</span>');
-            elem.insertAdjacentHTML('afterBegin', '<span>!!3!</span>');
-            elem.insertAdjacentHTML('beforeEnd', '<span>!!4!</span>');
-
-    </script>
+<script>
+func=(elem)=>{
+    document.getElementById('result').value+=elem.value;
+}
+</script> -->
+<!-- <input type="submit" style="cursor: progress;" onclick="func(this)">
+<script>
+func=(element)=>{
+   element.style.cursor='text';
+}
+</script> -->
 </body>
 </html>

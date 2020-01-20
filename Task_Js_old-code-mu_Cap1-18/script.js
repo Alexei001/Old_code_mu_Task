@@ -2034,7 +2034,7 @@ console.log(arr.every(function(element,index){
 //console.log(Math.max(spread(arr)));
 //console.log('hello world!!');-
 
-let arr =[1,2,3,7];
+/* let arr =[1,2,3,7];
 function func(...rest){
     let sum=0;
     for(let element of rest){
@@ -2043,4 +2043,200 @@ function func(...rest){
     return sum;
 }
 console.log(func(1,2,3));
+ */
+/* function getInt(...arrs){
+	let result = [];
+	
+	let arr0 = arrs.shift();
+	
+	for (let elem of arr0) {
+		if (inArrays(elem, arrs)) {
+			result.push(elem);
+		}
+	}
+	
+	return result;
+}
 
+function inArrays(elem, arrs){
+	for (let arr of arrs) {
+		if (!inArray(elem, arr)) {
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+function inArray(elem, arr) {
+	return arr.indexOf(elem) !== -1;
+}
+
+// Проверим работу:
+let result = getInt([1, 2, 3], [2, 3, 4], [4, 3, 2]);
+
+console.log(result); */
+/* let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+let [name,surname,department,position,salary]=arr;
+console.log(surname);
+console.log(department);
+console.log(position);
+console.log(salary);
+console.log(name); */
+/* 
+function func() {
+	return ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+}
+let [name,surname,department,position,salary]=func();
+let arr = func();
+
+console.log(surname);
+console.log(department);
+console.log(position);
+console.log(salary);
+console.log(name); */
+/* let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000],[,,department,position,]=arr;
+console.log(department);
+console.log(position);
+ */
+
+/* let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+let[name,surname,...info]=arr;
+console.log(`${name} ${surname} ${info}`); */
+
+/* 
+let arr = ['Иван', 'Иванов', 'отдел разработки'];
+let[name,surname,department,position='djunior']=arr;
+console.log(`${name} ${surname} ${department} ${position}`); */
+
+/* let arr=[1,20];
+let [year=years(),month,date, day=func()]=arr;
+function years(){
+    let now=new Date();
+    return now.getFullYear();
+}
+function func(){
+    let now=new Date();
+    return now.getDay();
+}
+
+console.log(year);
+console.log(month);
+console.log(date);
+console.log(day); */
+// let options = {
+// 	color: 'red',
+// 	width:  400,
+// 	height: 500,
+// };
+// let {color,width,height}=options;
+// console.log(color);
+// console.log(width);
+// console.log(height);
+
+
+/* let obj = {
+	year:  2025,
+	month: 12,
+	day:   31,
+};
+
+let {year: y, month: m, day: d} = obj;
+
+console.log(y); // выведет 2025
+console.log(m); // выведет 12
+console.log(d); */
+
+/* 
+let options = {
+	color: 'red',
+	width:  400,
+	height: 500,
+};
+ let {color: c,width:w,height:h}=options;
+console.log(c);
+console.log(w);
+console.log(h); 
+ */
+/* let options = {
+	width:  400,
+	height: 500,
+};
+let {color='black',width,height}=options;
+console.log(color);
+console.log(width)
+console.log(height); */
+
+/* let obj = {
+    year:20252,
+	month: 12,
+	day:   31,
+};
+
+let {year:y = 2025, month, day} = obj;
+
+console.log(y);  // выведет 2025
+console.log(month); // выведет 1
+console.log(day);  */
+
+/* let options = {
+    color:'red',
+	width:  400,
+	height: 500,
+};
+let {color:c='black',width,height}=options;
+
+console.log(c);
+console.log(width);
+console.log(height); */
+/* function func([name,surname,department,position,salary]) {
+	console.log(name);
+	console.log(surname);
+	console.log(department);
+	console.log(position);
+	console.log(salary);
+}
+
+func( ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000] ); */
+/* function func([name,surname,...info]) {
+	console.log(name);
+	console.log(surname);
+	console.log(info);
+}
+
+func( ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000] ); */
+
+/* function func([name,surname,department='djunior']) {
+	console.log(name);
+	console.log(surname);
+	console.log(department);
+}
+
+func( ['Иван', 'Иванов', ] ); */
+
+/* function func(department, [name,surname], hired) {
+    console.log(name);
+    console.log(surname);
+    console.log(department);
+    console.log(hired);
+
+}
+
+func( 'отдел разработки', ['Иван', 'Иванов'], '2018-12-31' ); */
+
+/* 
+function func({color,width,height}) {
+	console.log(color);
+	console.log(width);
+	console.log(height);
+}
+
+func( {color: 'red', width: 400, height: 500} ); */
+
+ /*    function func({color='black',width,height}) {
+        console.log(color);
+        console.log(width);
+        console.log(height);
+    }
+
+    func( {color: 'red', width: 400, height: 500} ); */
