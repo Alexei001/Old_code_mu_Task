@@ -219,6 +219,14 @@ console.log(date.getFullYear());*/
     }
  */
 
- console.log('hello world!');
+/* let date= new Date();
+console.log( date.getDay()+'-' + date.getMonth()+'-' + date.getFullYear()); */
     
+/* let months = [
+	'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+	'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+];
+let date= new Date();
+alert(months[date.getMonth()+1]); */
+
 

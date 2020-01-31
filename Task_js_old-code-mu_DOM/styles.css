@@ -1,15 +1,26 @@
-body{
-    background-color: yellow;
-}
-.div1{
-    width: 50px;
-    height: 50px;
+
+ div{
+    width: 250px;
+    height: 250px;
     border: 2px solid green;
+    background-color: chartreuse;
+} 
+
+.display{
+    width: 250px;
+    height: 250px;
+    border:5px solid red;
 }
 
-table, td, tr, th{
-    border: 2px solid black;
-    bord
-}
 
+.paragraph{
+    color: red;
+}
+.new-class{
+    color: yellowgreen;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
 
