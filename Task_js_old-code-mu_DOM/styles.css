@@ -2,16 +2,12 @@
  div{
     width: 250px;
     height: 250px;
-    border: 2px solid green;
+    border: 30px solid red;
     background-color: chartreuse;
+    padding: 30px;
+    margin: 3px;
+    overflow: auto;
 } 
-
-.display{
-    width: 250px;
-    height: 250px;
-    border:5px solid red;
-}
-
 
 .paragraph{
     color: red;

@@ -229,4 +229,20 @@ console.log( date.getDay()+'-' + date.getMonth()+'-' + date.getFullYear()); */
 let date= new Date();
 alert(months[date.getMonth()+1]); */
 
+/* 
+let arrString=['helloo','world', 'mamamaaa', 'sadugsakgdajs', 'dsadgasyhdw','sadawjdas'], arrEleme=[], result;
+for(let elem of arrString){
+    let elemLength=elem.length;
+    for(let k=arrString.length;k>0; k--){
+        let elem2Length=arrString[k].length;
+        if(elemLength>elem2Length){
+            result=elemLength
+        }
+    }
+   
+    }
+ */
+//metriks works
+
+
 

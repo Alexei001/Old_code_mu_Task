@@ -1172,6 +1172,87 @@ document.querySelector('input').addEventListener('click', function(){
     
 })
 </script> -->
+ <div id="element">
+    Lorem ipsum dolorsit amet consectetur adipiscing elit.
+     Sed viverra mollis lorem, 
+     fringilla dapibus nisi commodo interdum. 
+     Vivamus in turpis quis purus dapibus aliquam 
+     id nec velit. In at aliquet sem, a rutrum neque. 
+     Vestibulum posuere lobortis accumsan.
+     Etiam non tincidunt erat, vel condimentum turpis.
+     Lorem ipsum dolorsit amet consectetur adipiscing elit. 
+     Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
+      Vivamus in turpis quis purus dapibus aliquam id nec velit. 
+      In at aliquet sem, a rutrum neque. 
+      Vestibulum posuere lobortis accumsan.
+      EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. Показать решение.
+</div>
+ <div id="element">
+    Lorem ipsum dolorsit amet consectetur adipiscing elit.
+     Sed viverra mollis lorem, 
+     fringilla dapibus nisi commodo interdum. 
+     Vivamus in turpis quis purus dapibus aliquam 
+     id nec velit. In at aliquet sem, a rutrum neque. 
+     Vestibulum posuere lobortis accumsan.
+     Etiam non tincidunt erat, vel condimentum turpis.
+     Lorem ipsum dolorsit amet consectetur adipiscing elit. 
+     Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
+      Vivamus in turpis quis purus dapibus aliquam id nec velit. 
+      In at aliquet sem, a rutrum neque. 
+      Vestibulum posuere lobortis accumsan.
+      EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. Показать решение.
+</div>
+ <div id="element">
+    Lorem ipsum dolorsit amet consectetur adipiscing elit.
+     Sed viverra mollis lorem, 
+     fringilla dapibus nisi commodo interdum. 
+     Vivamus in turpis quis purus dapibus aliquam 
+     id nec velit. In at aliquet sem, a rutrum neque. 
+     Vestibulum posuere lobortis accumsan.
+     Etiam non tincidunt erat, vel condimentum turpis.
+     Lorem ipsum dolorsit amet consectetur adipiscing elit. 
+     Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
+      Vivamus in turpis quis purus dapibus aliquam id nec velit. 
+      In at aliquet sem, a rutrum neque. 
+      Vestibulum posuere lobortis accumsan.
+      EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. Показать решение.
+</div>
+<input type="submit">
+<p></p>
+<!--<script>
+document.querySelector('input').addEventListener('click', func);
+let paragraph=document.querySelector('p');
+let elem=document.querySelector('#element');
+function func(){
+    console.log(elem.clientTop+' clientTop');
+    console.log(elem.clientLeft+' clientLeft');
+    console.log(elem.clientHeight+' clientHeight');
+    console.log(elem.clientWidth+' clientWidth'); 
+    console.log(elem.offsetWidth+' offsetWidth');
+    console.log(elem.offsetHeight+' offsetHeight');
+   console.log(getComputedStyle(elem).height);
+ 
+}
+
+</script> -->
+<script>
+document.querySelector('input').addEventListener('click', func);
+let paragraph=document.querySelector('p');
+let elem=document.querySelector('#element');
+function func(){
+   console.log(elem.scrollTop+' scrollTop');
+   console.log(elem.scrollLeft+' scrollLeft');
+   //elem.scrollTop=15;
+   //elem.scrollTop +=10;
+   console.log(elem.scrollHeight+' scrollHeight');
+   console.log(elem.scrollWidth+ ' scrollWidth');
+   elem.scrollTop=elem.scrollWidth-350;
+   console.log(window.pageXOffset+' pageXoffset');
+   console.log(window.pageYOffset+' pageYoffset');
+   
+}
+
+</script>
 
 </body>
 </html>
