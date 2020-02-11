@@ -145,7 +145,7 @@ func=()=>{
     element.style.border='2px solvalue red';
     element.style.borderRadius ='20px';
     element.style.wvalueth ='200px';
-    element.style.height ='200px';
+    element.swidth ='200px';
 }
 </script> -->
   <!--   <p>this is input paragraph</p>
@@ -1172,22 +1172,8 @@ document.querySelector('input').addEventListener('click', function(){
     
 })
 </script> -->
- <div id="element">
-    Lorem ipsum dolorsit amet consectetur adipiscing elit.
-     Sed viverra mollis lorem, 
-     fringilla dapibus nisi commodo interdum. 
-     Vivamus in turpis quis purus dapibus aliquam 
-     id nec velit. In at aliquet sem, a rutrum neque. 
-     Vestibulum posuere lobortis accumsan.
-     Etiam non tincidunt erat, vel condimentum turpis.
-     Lorem ipsum dolorsit amet consectetur adipiscing elit. 
-     Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
-      Vivamus in turpis quis purus dapibus aliquam id nec velit. 
-      In at aliquet sem, a rutrum neque. 
-      Vestibulum posuere lobortis accumsan.
-      EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. Показать решение.
-</div>
- <div id="element">
+
+ <!-- <div id="element">
     Lorem ipsum dolorsit amet consectetur adipiscing elit.
      Sed viverra mollis lorem, 
      fringilla dapibus nisi commodo interdum. 
@@ -1218,7 +1204,35 @@ document.querySelector('input').addEventListener('click', function(){
       EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. Показать решение.
 </div>
 <input type="submit">
-<p></p>
+ <div id="element">
+    Lorem ipsum dolorsit amet consectetur adipiscing elit.
+     Sed viverra mollis lorem, 
+     fringilla dapibus nisi commodo interdum. 
+     Vivamus in turpis quis purus dapibus aliquam 
+     id nec velit. In at aliquet sem, a rutrum neque. 
+     Vestibulum posuere lobortis accumsan.
+     Etiam non tincidunt erat, vel condimentum turpis.
+     Lorem ipsum dolorsit amet consectetur adipiscing elit. 
+     Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
+      Vivamus in turpis quis purus dapibus aliquam id nec velit. 
+      In at aliquet sem, a rutrum neque. 
+      Vestibulum posuere lobortis accumsan.
+      EtiamnontinciduntcondimentumturpisДанстраницавертикальнойполосойпрокруткиПонажатиюнакнопкуузнайтенасколькостраницапрокрученаповертикалиПоказатьрешение.
+</div>
+E    Lorem ipsum dolorsit amet consectetur adipiscing elit.
+Sed viverra mollis lorem, 
+fringilla dapibus nisi commodo interdum. 
+Vivamus in turpis quis purus dapibus aliquam 
+id nec velit. In at aliquet sem, a rutrum neque. 
+Vestibulum posuere lobortis accumsan.
+Etiam non tincidunt erat, vel condimentum turpis.
+Lorem ipsum dolorsit amet consectetur adipiscing elit. 
+Sed viverra mollis lorem, fringilla dapibus nisi commodo interdum.
+ Vivamus in turpis quis purus dapibus aliquam id nec velit. 
+ In at aliquet sem, a rutrum neque. 
+ Vestibulum posuere lobortis accumsan.
+ EtiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки.tiamnontinciduntcondimentumturpisДанстраницавертикальной полосой прокрутки. По нажатию на кнопку узнайтенасколькостраницапрокрученапвертикалиПоказать решение.
+<p></p> -->
 <!--<script>
 document.querySelector('input').addEventListener('click', func);
 let paragraph=document.querySelector('p');
@@ -1235,24 +1249,55 @@ function func(){
 }
 
 </script> -->
-<script>
+<!-- <script>
 document.querySelector('input').addEventListener('click', func);
 let paragraph=document.querySelector('p');
-let elem=document.querySelector('#element');
+let elemArr=document.querySelectorAll('#element');
 function func(){
-   console.log(elem.scrollTop+' scrollTop');
+    console.log(elem.scrollTop+' scrollTop');
    console.log(elem.scrollLeft+' scrollLeft');
-   //elem.scrollTop=15;
-   //elem.scrollTop +=10;
+   elem.scrollTop=15;
+   elem.scrollTop +=10;
    console.log(elem.scrollHeight+' scrollHeight');
    console.log(elem.scrollWidth+ ' scrollWidth');
    elem.scrollTop=elem.scrollWidth-350;
    console.log(window.pageXOffset+' pageXoffset');
    console.log(window.pageYOffset+' pageYoffset');
-   
+    
+    window.scrollTo(300, 50);
+    window.scrollBy(0, -150);
+    window.scrollBy(0, 150);
+    let elem=document.documentElement;
+    console.log(elem.clientHeight);
+    console.log(elem.scrollTop);
+    console.log(elem.scrollHeight);
+    console.log(1311-384);
+    if(elem.scrollHeight-elem.scrollTop==elem.clientHeight){
+        window.scrollTo(0,100);
+    }
+    for(let elem of elemArr){
+        console.log(elem.offsetWidth);
+        let elements = elem.offsetWidth;
+        elem.style.Width=elements*2+'px';
+    }
 }
 
-</script>
+</script> -->
+
+<!-- <div id="element"></div>
+<input type="submit">
+<script>
+    let divElement=document.querySelector('#element');
+    let cssElement=getComputedStyle(divElement);
+document.querySelector('input').addEventListener('click', function(){
+    console.log(divElement.offsetHeight);
+    console.log(divElement.offsetWidth);
+    console.log(cssElement.height);
+    console.log(divElement.clientTop);
+    divElement.style.height=divElement.offsetHeight*2+ 'px';
+    divElement.style.width=divElement.offsetWidth*2+ 'px';
+})
+</script> -->
 
 </body>
 </html>
